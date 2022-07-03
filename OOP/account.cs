@@ -1,20 +1,18 @@
 ﻿namespace OOP
 {
+    
     public class account
     {
-       
-        private int _number;
+        private static int _startnumber = 11211321;
         private decimal _balance;
         private byte _type;
 
         public int Getnumber()
         {
-            return _number;
+            int number = _startnumber++;
+            return number;
         }
-        public void Setnumber(int number)
-        {
-            _number = number;
-        }
+       
         public decimal Getbalance()
         {
             return _balance;
