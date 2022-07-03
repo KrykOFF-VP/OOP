@@ -2,7 +2,7 @@
 {
     public class account
     {
-        static int _X;
+       
         private int _number;
         private decimal _balance;
         private byte _type;
