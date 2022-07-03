@@ -13,10 +13,12 @@
             return number;
         }
 
-        public account(byte type)
+        public account(decimal balance, byte type)
         {
-             _type = type;
-            Console.WriteLine($"Cчет №:{Getnumber()} имеет тип: {type}");
+
+            _balance = balance;
+            _type = type;
+            Console.WriteLine($"Cчет №:{Getnumber()} типа: {type} имеет баланс ={balance}");
 
         }
 
