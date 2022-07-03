@@ -12,25 +12,14 @@
             int number = _startnumber++;
             return number;
         }
-       
-        public decimal Getbalance()
+       public account(decimal balance)
         {
-            return _balance;
+            _balance = balance;
+            Console.WriteLine($"Cчет №:{Getnumber()} имеет баланс: {balance}");
+            
         }
-        public void Setbalance(decimal balance)
-        {
-            _balance =balance ;
-        }
-        public byte Gettype()
-        {
-            return _type;
-        }
-        public void Settype(byte type)
-        {
-            _type=type;
-        }   
-        
-        
-        
+      
+
+
     }
 }
