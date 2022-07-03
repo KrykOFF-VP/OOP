@@ -12,13 +12,13 @@
             int number = _startnumber++;
             return number;
         }
-       public account(decimal balance)
+
+        public account(byte type)
         {
-            _balance = balance;
-            Console.WriteLine($"Cчет №:{Getnumber()} имеет баланс: {balance}");
-            
+             _type = type;
+            Console.WriteLine($"Cчет №:{Getnumber()} имеет тип: {type}");
+
         }
-      
 
 
     }
