@@ -7,8 +7,7 @@
        
         public int Getnumber()
         {
-            int number = _startnumber++;
-            return number;
+            return _startnumber++;
         }
         public int number { get => Getnumber(); }
 
