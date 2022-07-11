@@ -1,19 +1,25 @@
 ﻿namespace OOP
 {
-    
-    public class account
+
+    public class Account
     {
-        private static int _startnumber = 11211321;
-       
-        public int Getnumber()
+
+
+        public string Number { get; }
+        public decimal Balance { get; set; }
+        public byte Type { get; set; }
+
+        private static int _accountNumber= 114342342;
+
+        public Account( decimal balance, byte type)
         {
-            return _startnumber++;
+            Number = _accountNumber.ToString();
+            _accountNumber++;
+
+            Balance = balance;
+            Type = type;
         }
-        public int number { get => Getnumber(); }
 
-        public decimal balance { get ; set ; }
-
-        public byte type { get; set ; }
 
     }
 }
