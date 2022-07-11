@@ -46,25 +46,22 @@ while (true)
 static void Task1()
 {
 
-    Account Akk1 = new Account();
-    Akk1.balance = 15987.58m;
-    Akk1.type = 45;
+    Account Akk1 = new Account(15987.58m, 45);
+  
 
 
+    var Akk2 = new Account(4245.42m, 1);
+   
 
-    var Akk2 = new Account();
-    Akk2.balance = 4245.42m;
-    Akk2.type = 1;
-
-    Console.WriteLine($"Cчет №:{Akk1.number} типа:{Akk1.type}, имеет баланс: {Akk1.balance}");
-    Console.WriteLine($"Cчет №:{Akk2.number} типа:{Akk2.type}, имеет баланс: {Akk2.balance}");
+    Console.WriteLine($"Cчет №:{Akk1.Number} типа:{Akk1.Type}, имеет баланс: {Akk1.Balance}");
+    Console.WriteLine($"Cчет №:{Akk2.Number} типа:{Akk2.Type}, имеет баланс: {Akk2.Balance}");
 
     Console.WriteLine("Введите сумму для перевода денежных средств");
     decimal money = decimal.Parse(Console.ReadLine());
     Akk1.TransferMoney(ref Akk2, money);
 
-    Console.WriteLine($"Cчет №:{Akk1.number} типа:{Akk1.type}, имеет баланс: {Akk1.balance}");
-    Console.WriteLine($"Cчет №:{Akk2.number} типа:{Akk2.type}, имеет баланс: {Akk2.balance}");
+    Console.WriteLine($"Cчет №:{Akk1.Number} типа:{Akk1.Type}, имеет баланс: {Akk1.Balance}");
+    Console.WriteLine($"Cчет №:{Akk2.Number} типа:{Akk2.Type}, имеет баланс: {Akk2.Balance}");
     Console.WriteLine("Программа завершена");
     Console.ReadKey();
 
@@ -74,9 +71,9 @@ static void Task2()
 {
 
     Console.WriteLine("Введите слово для реверса букв");
-    string thisword = Console.ReadLine();
+    string _thisword = Console.ReadLine();
     
-   WordReverse reverse = new WordReverse();
-    Console.WriteLine(WordReverse.ReverseWord(ref thisword));
+   WordReverse Reverse = new WordReverse();
+    Console.WriteLine(WordReverse.ReverseWord(ref _thisword));
   
 }
