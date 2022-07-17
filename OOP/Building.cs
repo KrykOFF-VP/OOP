@@ -4,22 +4,74 @@ namespace OOP
 {
     public class Building
     {
-        private int _Number;
-        public int Number { get => _Number; }
+        /// <summary>
+        /// Приватные поля
+        /// </summary>
+        private uint _Number;
+        private static uint _Bildnumber = 0;
 
-        private int _Height;
-        public int Height { get => _Height; }
+        private uint _Height;
 
-        private int _Floors;
-        public int Floors { get => _Floors;}
+        private uint _Floors;
 
-        private int _Flat;
-        public int Flat { get => _Flat; }
+        private uint _Flat;
 
-        private int _Entrance; 
-        public int Entrance { get => _Entrance;}
+        private uint _Entrance;
 
 
+        /// <summary>
+        /// Свойства
+        /// </summary>
+        public uint Number
+        {
+            get { return _Number; }
+            
+        }
+
+        public uint Height
+        {
+            get { return _Height; }
+            set { _Height = value; }
+        }
+
+        public uint Floors
+        {
+            get { return _Floors; }
+            set { _Floors = value; }
+        }
+
+        public uint Flat
+        {
+            get { return _Flat; }
+            set { _Flat = value; }
+        }
+
+        public uint Entrance
+        {
+            get { return _Entrance; }
+            set { _Entrance = value; }
+        }
+
+
+        // Конструктор
+        internal Building(uint height, uint floors, uint flats, uint entrances)
+        {
+            _Number = GenerateNumb();
+            _Height = height;
+            _Floors = floors;
+            _Flat = flats; 
+            _Entrance = entrances;
+             
+        }
+        /// <summary>
+        /// Методы
+        /// </summary>
+        /// <returns></returns>
+        private uint GenerateNumb()
+        {
+            _Bildnumber ++;
+            return _Bildnumber;
+        }
 
 
 
