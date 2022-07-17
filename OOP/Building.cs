@@ -10,7 +10,8 @@ namespace OOP
         private uint _Number;
         private static uint _Bildnumber = 0;
 
-        private uint _Height;
+        private double _Height;
+        private static double _Bildcelling = 2.7;
 
         private uint _Floors;
 
@@ -28,7 +29,7 @@ namespace OOP
             
         }
 
-        public uint Height
+        public double Height
         {
             get { return _Height; }
             set { _Height = value; }
@@ -54,10 +55,9 @@ namespace OOP
 
 
         // Конструктор
-        internal Building(uint height, uint floors, uint flats, uint entrances)
+        internal Building(uint floors, uint flats, uint entrances)
         {
             _Number = GenerateNumb();
-            _Height = height;
             _Floors = floors;
             _Flat = flats; 
             _Entrance = entrances;
@@ -72,8 +72,20 @@ namespace OOP
             _Bildnumber ++;
             return _Bildnumber;
         }
+        public double GetHeight()
+        {
+         Height = _Floors * _Bildcelling;
+         return Height;
+        }
+        public uint FlatsInEntrance()
+        {
+            return _Flat / _Entrance;
+            
+        }
+        public uint FlatsInFloors()
+        {
+            return _Flat / _Floors;
 
-
-
+        }
     }
 }
