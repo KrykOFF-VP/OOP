@@ -29,10 +29,10 @@
         public bool TransferMoney(ref Account Akk, decimal money)
         {
 
-            if (Akk.balance >= money)
+            if (Akk.Balance >= money)
             {
-                this.balance += money;
-                Akk.balance -= money;
+                this.Balance += money;
+                Akk.Balance -= money;
                 return true;
                
             }
