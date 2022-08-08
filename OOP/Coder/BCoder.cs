@@ -1,7 +1,7 @@
 ﻿
 namespace OOP
 {
-    public class ACoder : ICoder
+    public class BCoder : ICoder
     {
 
 
@@ -22,21 +22,21 @@ namespace OOP
                 if ((Convert.ToInt16(letter[i]) >= 97) && (Convert.ToInt16(letter[i]) <= 122))
                 {
                     //Если буква, после сдвига выходит за пределы алфавита
-                    if (Convert.ToInt16(letter[i]) + 1 > 122)
+                    if (Convert.ToInt16(letter[i]) + 25 > 122)
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 1 - 26);
+                        result += Convert.ToChar(122 - (Convert.ToInt16(letter[i]) - 97));
                     //Если буква может быть сдвинута в пределах алфавита
                     else
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 1);
+                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 25);
                 }
                 //Если буква является прописной
                 if ((Convert.ToInt16(letter[i]) >= 65) && (Convert.ToInt16(letter[i]) <= 90))
                 {
                     //Если буква, после сдвига выходит за пределы алфавита
-                    if (Convert.ToInt16(letter[i]) + 1 > 90)
+                    if (Convert.ToInt16(letter[i]) + 25 > 90)
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 1 - 26);
+                        result += Convert.ToChar(90 - (Convert.ToInt16(letter[i]) - 65));
                     //Если буква может быть сдвинута в пределах алфавита
                     else
                         //Добавление в строку результатов символ
@@ -46,25 +46,25 @@ namespace OOP
                 if ((Convert.ToInt16(letter[i]) >= 1072) && (Convert.ToInt16(letter[i]) <= 1103))
                 {
                     //Если буква, после сдвига выходит за пределы алфавита
-                    if (Convert.ToInt16(letter[i]) + 1 > 1103)
+                    if (Convert.ToInt16(letter[i]) + 32 > 1103)
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 1 - 32);
+                        result += Convert.ToChar(1103 - (Convert.ToInt16(letter[i]) - 1072));
                     //Если буква может быть сдвинута в пределах алфавита
                     else
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 1);
+                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 32);
                 }
                 //Если буква является прописной
                 if ((Convert.ToInt16(letter[i]) >= 1040) && (Convert.ToInt16(letter[i]) <= 1071))
                 {
                     //Если буква, после сдвига выходит за пределы алфавита
-                    if (Convert.ToInt16(letter[i]) + 1 > 1071)
+                    if (Convert.ToInt16(letter[i]) + 32 > 1071)
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 1 - 32);
+                        result += Convert.ToChar(1071 - (Convert.ToInt16(letter[i]) - 1040));
                     //Если буква может быть сдвинута в пределах алфавита
                     else
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 1);
+                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 32);
                 }
             }
 
@@ -86,49 +86,49 @@ namespace OOP
                 if ((Convert.ToInt16(letter[i]) >= 97) && (Convert.ToInt16(letter[i]) <= 122))
                 {
                     //Если буква, после сдвига выходит за пределы алфавита
-                    if (Convert.ToInt16(letter[i]) - 1 > 122)
+                    if (Convert.ToInt16(letter[i]) + 25 > 122)
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) - 1 + 26);
+                        result += Convert.ToChar(122 - (Convert.ToInt16(letter[i]) - 97));
                     //Если буква может быть сдвинута в пределах алфавита
                     else
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) - 1);
+                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 25);
                 }
                 //Если буква является прописной
                 if ((Convert.ToInt16(letter[i]) >= 65) && (Convert.ToInt16(letter[i]) <= 90))
                 {
                     //Если буква, после сдвига выходит за пределы алфавита
-                    if (Convert.ToInt16(letter[i]) - 1 > 90)
+                    if (Convert.ToInt16(letter[i]) + 25 > 90)
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) - 1 + 26);
+                        result += Convert.ToChar(90 - (Convert.ToInt16(letter[i]) - 65));
                     //Если буква может быть сдвинута в пределах алфавита
                     else
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) - 1);
+                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 1);
                 }
                 //Если буква является строчной
                 if ((Convert.ToInt16(letter[i]) >= 1072) && (Convert.ToInt16(letter[i]) <= 1103))
                 {
                     //Если буква, после сдвига выходит за пределы алфавита
-                    if (Convert.ToInt16(letter[i]) - 1 > 1103)
+                    if (Convert.ToInt16(letter[i]) + 32 > 1103)
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) - 1 + 32);
+                        result += Convert.ToChar(1103 - (Convert.ToInt16(letter[i]) - 1072));
                     //Если буква может быть сдвинута в пределах алфавита
                     else
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) - 1);
+                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 32);
                 }
                 //Если буква является прописной
                 if ((Convert.ToInt16(letter[i]) >= 1040) && (Convert.ToInt16(letter[i]) <= 1071))
                 {
                     //Если буква, после сдвига выходит за пределы алфавита
-                    if (Convert.ToInt16(letter[i]) - 1 > 1071)
+                    if (Convert.ToInt16(letter[i]) + 32 > 1071)
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) - 1 + 32);
+                        result += Convert.ToChar(1071 - (Convert.ToInt16(letter[i]) - 1040));
                     //Если буква может быть сдвинута в пределах алфавита
                     else
                         //Добавление в строку результатов символ
-                        result += Convert.ToChar(Convert.ToInt16(letter[i]) - 1);
+                        result += Convert.ToChar(Convert.ToInt16(letter[i]) + 32);
                 }
             }
 
